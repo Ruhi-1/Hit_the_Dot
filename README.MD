@@ -1,5 +1,5 @@
-# Hit the Dot
-## README
+   # Hit the Dot
+  ## README
 
  ### User Story
 1. As a user i should be able to open the game and play in any size of the screen.

@@ -1,8 +1,38 @@
 h1 {
     display: flex;
     justify-content: center;
+    color: rgb(5, 145, 170);
 }
-h1 {
+h2 {
     display: flex;
     justify-content: center;
+    color: rgb(49, 78, 165);
+}
+.bling {
+    animation:blinkingText 3s infinite;
+}
+@keyframes blinkingText{
+    0%{  color: rgb(40, 116, 151);  }
+    49%{  color: rgb(23, 122, 161);     }
+    50%{  color: rgb(73, 133, 83);     }
+    99%{  color: rgb(121, 153, 70);     }
+    100%{ color: rgb(33, 175, 175);    }
+
+}
+div {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 250px;
+    margin: 25px;
+    padding: 30px;
+    border: 2px solid rgb(3, 1, 1);
+}
+#circle {
+    width: 1px;
+      height: 1px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: white;
 }

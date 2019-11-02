@@ -1,38 +1,60 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr 3fr .5fr .5fr;background-color: rgb(158, 75, 109);
+}
 h1 {
-    display: flex;
-    justify-content: center;
+    grid-row: 1 / 5;
+    grid-column: 2 / 2;
     color: rgb(5, 145, 170);
+    text-align: left;
 }
 h2 {
-    display: flex;
-    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
     color: rgb(49, 78, 165);
 }
 .bling {
     animation:blinkingText 3s infinite;
+    text-align: center;
 }
-@keyframes blinkingText{
-    0%{  color: rgb(40, 116, 151);  }
-    49%{  color: rgb(23, 122, 161);     }
-    50%{  color: rgb(73, 133, 83);     }
-    99%{  color: rgb(121, 153, 70);     }
-    100%{ color: rgb(33, 175, 175);    }
+.style {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    align-items: flex-end;    
 
 }
-div {
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    height: 250px;
-    margin: 25px;
-    padding: 30px;
-    border: 2px solid rgb(3, 1, 1);
+@keyframes blinkingText{
+    0%{  color: rgb(214, 90, 90);  }
+    49%{  color: rgb(240, 150, 77);     }
+    50%{  color: rgb(145, 189, 96);     }
+    99%{  color: rgb(85, 192, 187);     }
+    100%{ color: rgb(84, 182, 228);    }
+
+}
+.div {
+   display: grid;
+   grid-column: 2 / 3;
+   grid-row: 1 / 4;
 }
 #circle {
-    width: 1px;
-      height: 1px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      background: white;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    height: 20rem;
+}
+.dots {
+    padding: 12px;
+    width: 5px;
+    height: 25px;
+    
+    
+}
+table {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 30px;
+    height: 30px;
 }

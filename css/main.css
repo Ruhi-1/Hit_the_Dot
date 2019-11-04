@@ -1,11 +1,13 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr .5fr 3fr .5fr .5fr;background-color: rgb(158, 75, 109);
+    grid-template-rows: 1fr .5fr 3.5fr .5fr .5fr;
+    background-color: rgb(158, 75, 109);
 }
 h1 {
     grid-row: 1 / 5;
-    grid-column: 2 / 2;
+    grid-column: 2 / 3;
+    padding: none;
     color: rgb(26, 31, 100);
     text-align: left;
     text-shadow: 3px 2px rgb(52, 184, 189);
@@ -22,13 +24,13 @@ h2 {
     text-shadow: 3px 2px rgb(34, 42, 77);
 }
 .style {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
     align-items: flex-end;    
 
 }
 @keyframes blinkingText{
-    0%{  color: rgb(50, 119, 23);  }
+    0%{  color: rgb(64, 151, 30);  }
     49%{  color: rgb(133, 113, 24);     }
     50%{  color: rgb(102, 134, 66);     }
     99%{  color: rgb(47, 122, 119);     }
@@ -38,11 +40,12 @@ h2 {
 .div {
    display: grid;
    grid-column: 2 / 3;
-   grid-row: 1 / 4;
-}
+   grid-row: 1 / 1;
+   padding: none;
+ } 
 #circle {
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
     display: flex;
     justify-content: center;
     width: 30rem;
@@ -57,7 +60,7 @@ h2 {
 }
 table {
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
     width: 30px;
     height: 30px;
 }
@@ -70,4 +73,30 @@ table {
     font-size: 1rem;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.scorecard {
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+    border: 2px solid black;
+    width: 7rem;
+    height: 2rem;
+    background-color: rgb(158, 75, 109);
+}
+.align {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    justify-self: right;
+}
+.record {
+    grid-row: 2 / 2;
+    grid-column: 3 / 3;
+    border: 2px solid black;
+    width: 3rem;
+    height: 2rem;
+    background-color: rgb(158, 75, 109);
+}
+.timer {
+    grid-row: 2 / 2;
+    grid-column: 3 / 3;
+    justify-self: center;
 }

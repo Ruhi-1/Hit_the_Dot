@@ -4,10 +4,14 @@ timerID = null
 var playing = false;
 var currentpos = -1;
 var numholes = 6 * 10;
-function clearholes() {
-    for(var i=0; i< document.circles.elements.length; i++)
-    document.circles.elements[i].checked=false;
+function clear() {
+    for(var i=0; i<document.rtp.elements.length; i++)
+    document.rtp.elements[i].checked=false;
 }
+
+
+
+
 
 
 
@@ -30,10 +34,23 @@ var playBtnClick = document.getElementsByClassName("button");
 
 
 /*----- functions -----*/
+// var i=0;
+// var inhtml="."
+// var num=[];
+// function evt() {
+//     i=Math.floor(Math.random()*60)
+//     //alert(i)
+//     while (i<=60){
+//     document.getElementById("dot").innerHTML = inhtml + "."
+//     inhtml = document.getElementById("dot").innerHTML
+//     if (inhtml.length>num){ 
+//         inhtml=document.getElementById("dot").innerHTML+"<br />"
+//         num=num+20
+//     }
+//     i++;
+//     }
+// }
 
 
-function hithead(id){
-    if(playing==false) {
-        clearholes();
-    }
-}
+
+

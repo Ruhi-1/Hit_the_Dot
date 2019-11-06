@@ -36,7 +36,9 @@ var playBtnClick = document.getElementById('reset');
 /*----- event listeners -----*/
 document.getElementById('reset')
     .addEventListener("click", makeId);
-   
+// document.getElementById('circle')
+//     .addEventListener("click", movesMade);
+
 
 
 /*----- functions -----*/
@@ -48,10 +50,19 @@ function makeId()
     var dot = document.getElementById(randomNumber);
     
     dot.checked = true;
-    // console.log(dot);
+    console.log(dot);
 }
+// function movesMade() {
+//     var randomNumber=Math.floor(Math.random() * dot)
+//     console.log(randomNumber);
+// }
 
-
+function hithead(evt) {
+    var dot=Math.floor(Math.random() * 60);
+    var dot = document.getElementById(dot)
+    dot.checked = true;
+    console.log(dot)
+}
 
 
 

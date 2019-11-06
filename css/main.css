@@ -61,8 +61,6 @@ h2 {
 table {
     grid-column: 2 / 3;
     grid-row: 3 / 5;
-    width: 30px;
-    height: 30px;
 }
 .button {
     grid-column: 2 / 3;
@@ -77,19 +75,20 @@ table {
 .scorecard {
     grid-row: 2 / 2;
     grid-column: 1 / 1;
+    justify-self: right;
     border: 2px solid black;
-    width: 7rem;
+    width: 4rem;
     height: 2rem;
     background-color: rgb(158, 75, 109);
 }
 .align {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
-    justify-self: right;
+    justify-self: center;
 }
 .record {
     grid-row: 2 / 2;
-    grid-column: 3 / 3;
+    grid-column: 1 / 1;
     border: 2px solid black;
     width: 3rem;
     height: 2rem;
@@ -100,3 +99,17 @@ table {
     grid-column: 3 / 3;
     justify-self: center;
 }
+
+.cell { 
+    width:30px; 
+    height:30px;
+    background-color:#333; 
+    color:#ccc;
+    float:left; 
+    margin-right:1px;
+    margin-bottom:1px;
+    }
+#container{ 
+     width:682px; height:310px; 
+    background-color:#555; font-size:85%;
+    }

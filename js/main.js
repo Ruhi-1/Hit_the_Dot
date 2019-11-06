@@ -21,35 +21,41 @@ function clear() {
 
 /*----- cached element references -----*/
 var total = document.getElementById("circle");
-var dot = document.getElementsByClassName("dots");
-var playBtnClick = document.getElementsByClassName("button");
+// var dot = document.getElementByClassName("dots");
+var playBtnClick = document.getElementById('reset');
+// console.log(playBtnClick);
+
+
+
+
+
 
 
 
 
 /*----- event listeners -----*/
-// document.getElementsByClassName("button")
-//     .addEventListner('click', playBtnClick);
-
+document.getElementById('reset')
+    .addEventListener("click", makeId);
+   
 
 
 /*----- functions -----*/
-// var i=0;
-// var inhtml="."
-// var num=[];
-// function evt() {
-//     i=Math.floor(Math.random()*60)
-//     //alert(i)
-//     while (i<=60){
-//     document.getElementById("dot").innerHTML = inhtml + "."
-//     inhtml = document.getElementById("dot").innerHTML
-//     if (inhtml.length>num){ 
-//         inhtml=document.getElementById("dot").innerHTML+"<br />"
-//         num=num+20
-//     }
-//     i++;
-//     }
-// }
+
+function makeId()
+    {
+    var randomNumber=Math.floor(Math.random() * 60);
+    
+    var dot = document.getElementById(randomNumber);
+    
+    dot.checked = true;
+    // console.log(dot);
+}
+
+
+
+
+
+
 
 
 

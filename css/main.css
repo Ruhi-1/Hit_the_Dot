@@ -93,7 +93,7 @@ table {
     grid-row: 2 / 2;
     justify-self: center; 
 } 
-.record {
+#record {
     grid-row: 2 / 2;
     grid-column: 3 / 3;
     border: 2px solid black;

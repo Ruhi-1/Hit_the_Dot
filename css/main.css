@@ -1,11 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr .5fr 3.5fr .5fr .5fr;
+    grid-template-columns: 33.33% 33.33% 33.34%;
+    grid-template-rows: 15% 15% 40% 30%;
     background-color: rgb(158, 75, 109);
 }
 h1 {
-    grid-row: 1 / 5;
+    grid-row: 1 / 1;
     grid-column: 2 / 3;
     padding: none;
     color: rgb(26, 31, 100);
@@ -14,8 +19,8 @@ h1 {
     font-size: 37px;
 }
 h2 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
     color: rgb(49, 78, 165);
 }
 .bling {
@@ -39,32 +44,34 @@ h2 {
 }
 .div {
    display: grid;
-   grid-column: 2 / 3;
+   grid-column: 2 / 2;
    grid-row: 1 / 1;
    padding: none;
  } 
-#circle {
-    grid-column: 2 / 3;
-    grid-row: 3 / 5;
+ #circle {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2; 
     display: flex;
     justify-content: center;
     width: 30rem;
     height: 20rem;
-}
+} 
 .dots {
     padding: 12px;
     width: 5px;
     height: 25px;
-    
-    
 }
 table {
-    grid-column: 2 / 3;
-    grid-row: 3 / 5;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+}
+#grab {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
 }
 .button {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
     justify-self: center;
     height: 40px;
     width: 60px;
@@ -81,14 +88,14 @@ table {
     height: 2rem;
     background-color: rgb(158, 75, 109);
 }
-.align {
+ .align {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
-    justify-self: center;
-}
+    justify-self: center; 
+} 
 .record {
     grid-row: 2 / 2;
-    grid-column: 1 / 1;
+    grid-column: 3 / 3;
     border: 2px solid black;
     width: 3rem;
     height: 2rem;
@@ -96,11 +103,11 @@ table {
 }
 .timer {
     grid-row: 2 / 2;
-    grid-column: 3 / 3;
+    grid-column: 1 / 1;
     justify-self: center;
 }
 
-.cell { 
+.cell {  
     width:30px; 
     height:30px;
     background-color:#333; 
@@ -113,3 +120,9 @@ table {
      width:682px; height:310px; 
     background-color:#555; font-size:85%;
     }
+#parent {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    justify-content: right;
+
+}

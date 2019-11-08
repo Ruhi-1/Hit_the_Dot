@@ -7,10 +7,10 @@ let oldDot = '';
 let playing = false;
 let currentpos = -1;
 let numholes = 6 * 10;
-function clear() {
-    for(let i=0; i<document.rtp.elements.length; i++)
-    document.rtp.elements[i].checked=true;
-}
+// function clear(){
+//     for(let i=0; i<document.box.total; i++)
+//     document.box[i].checked=true;
+// }
 
 /*----- cached element references -----*/
 const total = document.getElementById("circle");
@@ -45,6 +45,7 @@ function hithead(id) {
     dot=Math.floor(Math.random() * numholes);
     dot = document.getElementById(dot)
     dot.checked = true;
+    // scoreBtn();
 }
 
 function startPlay(){
@@ -54,6 +55,7 @@ var downloadTimer = setInterval(function(){
      document.getElementById("record").value = timeleft;
     if(timeleft == 20){
         clearInterval(downloadTimer);
+        stopgame();
     }
 }, 1000)};
 
@@ -62,11 +64,13 @@ function scoreBtn(evt) {
         score++;
     } else {
         score--;
-
     }
 };
-
-
+function stopgame() {
+    playing=false;
+    document.game.timeleft=0;
+    alert('Game Over.');
+}
 
 
 

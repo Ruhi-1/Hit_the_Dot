@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -79,11 +80,12 @@ table {
     cursor: pointer;
 }
 .button {
-    grid-column: 1 / 1;
-    grid-row: 2 / 2;
-    justify-self: right;
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    justify-self: center;
+    align-self: center;
     height: 40px;
-    width: 60px;
+    width: 70px;
     font-size: 1rem;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -92,28 +94,32 @@ table {
     grid-row: 2 / 2;
     grid-column: 1 / 1;
     justify-self: right;
-    border: 2px solid black;
+    border: 3px solid rgb(77, 74, 74);
     width: 4rem;
     height: 2rem;
-    background-color: rgb(158, 75, 109);
+    background-color: rgb(179, 149, 157);
 }
  .align {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
     justify-self: center; 
+    text-align: center;
 } 
 #record {
     grid-row: 2 / 2;
     grid-column: 3 / 3;
-    border: 2px solid black;
+    justify-items: center;
+    border-style: outset;
+    border: 3px solid rgb(77, 74, 74);
     width: 3rem;
     height: 2rem;
-    background-color: rgb(158, 75, 109);
+    background-color: rgb(179, 149, 157);
 }
 .timer {
     grid-row: 2 / 2;
     grid-column: 1 / 1;
     justify-self: center;
+    text-align: center;
 }
 
 .cell {  
@@ -130,12 +136,23 @@ table {
     background-color:#555; font-size:85%;
     }
 #parent {
-    grid-column: 1 / 1;
+    grid-column: 3 / 3;
     grid-row: 2 / 2;
-    justify-content: right;
+    justify-self: center;
 
 }
-h2 {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
+.reh2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:blinkingText 3s infinite;
+    text-align: center;
+    text-shadow: 3px 2px rgb(29, 56, 179);
+    font-size: 5rem;
+
 }
+.button:hover {
+    background-color: rgb(184, 163, 166);
+}
+
+

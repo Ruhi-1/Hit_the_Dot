@@ -2,13 +2,12 @@
  ## README
 
  ### User Story
-1. As a user i should be able to open the game and play in any size of the screen.
+1. As a user i should be able to open the game and play.
 2. As a user when i open the page i should see Hit the Dot game on my screen.
 3. As a user i should be able to click play button.
 4. As  a user when i play the game, Dot must appear at random places on my screen.
 5. As a user i should be able to click the play button and play the game.
-6. As a user i should be able to play more than 1 levels.
-7. As a user i want to enjoy the graphics of the game.
+6. As user i should be able to see my score.
 
   ### Purpose
 1. Its a Fun and relaxing game.

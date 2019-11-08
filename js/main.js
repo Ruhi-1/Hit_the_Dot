@@ -57,7 +57,7 @@ function startPlay() {
     var downloadTimer = setInterval(function(){
         timeleft += 1;
         document.getElementById("record").value = timeleft;
-        if(timeleft == 5){
+        if(timeleft == 20){
             clearInterval(downloadTimer);
             stopgame();
         }

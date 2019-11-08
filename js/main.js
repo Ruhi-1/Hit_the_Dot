@@ -11,12 +11,24 @@ let numholes = 6 * 10;
 /*----- cached element references -----*/
 const total = document.getElementById("circle");
 const playBtnClick = document.getElementById('reset');
+const restartBtnClick = document.getElementById('exit');
 const table = document.getElementById('grab');
 /*----- event listeners -----*/
 playBtnClick.addEventListener("click", makeId, startPlay);
+restartBtnClick.addEventListener("click", clearOverlay);
+
 
 /*----- functions -----*/
-
+function clearOverlay() {
+    document.getElementById("overlay").style.display = "none";
+    clearBoard();
+}
+function clearBoard() {
+    score = 0;
+    document.getElementsByClassName('scorecard')[0].value = score;
+    document.getElementById("record").value = 0;
+    dot.checked = false;
+}
 function checkButton() {
     playBtnClick.disabled = true;
     return true;
@@ -45,7 +57,7 @@ function startPlay() {
     var downloadTimer = setInterval(function(){
         timeleft += 1;
         document.getElementById("record").value = timeleft;
-        if(timeleft == 20){
+        if(timeleft == 5){
             clearInterval(downloadTimer);
             stopgame();
         }
@@ -63,12 +75,13 @@ function scoreBtn(userHit) {
 function stopgame() {
     playing=false;
     document.game.timeleft=0;
-    alert('Game Over. Your Score: ' + score);
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("endscore").innerText = "Your Score is  " + score;
     playBtnClick.disabled = false;
       return false;
 }
 
 
-
+//done
 
 

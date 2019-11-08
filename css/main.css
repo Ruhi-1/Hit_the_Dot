@@ -69,6 +69,15 @@ table {
     grid-column: 2 / 2;
     grid-row: 3 / 3;
 }
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    cursor: pointer;
+}
 .button {
     grid-column: 1 / 1;
     grid-row: 2 / 2;

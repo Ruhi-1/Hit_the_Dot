@@ -5,7 +5,6 @@ let score = 0;
 let dot = '';
 let oldDot = '';
 let playing = false;
-let currentpos = -1;
 let numholes = 6 * 10;
 
 /*----- cached element references -----*/
@@ -79,9 +78,4 @@ function stopgame() {
     document.getElementById("endscore").innerText = "Your Score is  " + score;
     playBtnClick.disabled = false;
       return false;
-}
-
-
-//done
-
-
+};
